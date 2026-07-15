@@ -62,4 +62,18 @@ Opsnook derives states from live file activity, so with static sample files:
   Claude Code installed, an approval prompt in any session appears in
   Opsnook as an actionable approval card.
 
+## Remove the sample data (after testing)
+
+One command removes everything the installer added — and nothing else. It
+deletes only the sample files by their exact paths, then clears the
+directories they lived in if (and only if) they are now empty:
+
+```sh
+rm -rf ~/.claude/projects/-Users-reviewer-Projects-acme-storefront ~/.claude/projects/-Users-reviewer-Projects-weather-cli ~/.codex/sessions/2026/07/15/rollout-2026-07-15T09-12-05-019f9a01-2b3c-7d4e-8f50-a1b2c3d4e5f6.jsonl ~/.codex/sessions/2026/07/15/rollout-2026-07-15T10-31-40-019f9b77-4c5d-7e6f-9a80-b2c3d4e5f6a7.jsonl; rmdir -p ~/.codex/sessions/2026/07/15 ~/.claude/projects 2>/dev/null; echo "Opsnook sample data removed."
+```
+
+Any real Claude Code or Codex data that may exist on the machine is left
+untouched: the command names only the fictional sample sessions, and the
+trailing `rmdir` refuses to remove non-empty directories by design.
+
 All sample content is fictional and was authored solely for App Review.
