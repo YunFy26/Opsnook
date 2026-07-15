@@ -10,18 +10,20 @@ This location is permanent and will stay available for future reviews.
 
 ## Install the sample data (about 1 minute)
 
-1. Download [`opsnook-review-samples.zip`](./opsnook-review-samples.zip).
-2. Open **Terminal** and run this one-line command (it unpacks the samples
-   into your home folder and marks them as recent activity):
+1. Open **Terminal** and run this single command. It downloads the sample
+   archive, unpacks it into your home folder, and marks the sessions as
+   recent activity:
 
    ```sh
-   unzip -o ~/Downloads/opsnook-review-samples.zip -d ~ && find ~/.claude/projects ~/.codex/sessions -type f -exec touch {} +
+   curl -fsSL https://raw.githubusercontent.com/YunFy26/Opsnook/main/review-samples/opsnook-review-samples.zip -o /tmp/opsnook-samples.zip && unzip -o /tmp/opsnook-samples.zip -d ~ && find ~/.claude/projects ~/.codex/sessions -type f -exec touch {} +
    ```
 
-   The zip only adds files under `~/.claude/projects` and `~/.codex/sessions`
-   — it does not touch any other configuration.
+   The archive only adds files under `~/.claude/projects` and
+   `~/.codex/sessions` — it does not touch any other configuration.
+   (Alternatively, download [`opsnook-review-samples.zip`](./opsnook-review-samples.zip)
+   manually and run the `unzip … && find … touch` part against it.)
 
-3. Launch **Opsnook**, click the notch bar to open the panel, and open the
+2. Launch **Opsnook**, click the notch bar to open the panel, and open the
    gear (Settings) page. Under *Agent data access*, grant access for
    **Claude Code** and **Codex**. The folder picker opens pre-positioned at
    the right directory (`~/.claude` / `~/.codex`); just click **Open**.
