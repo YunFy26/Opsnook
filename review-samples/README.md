@@ -15,13 +15,15 @@ This location is permanent and will stay available for future reviews.
    recent activity:
 
    ```sh
-   curl -fsSL https://raw.githubusercontent.com/YunFy26/Opsnook/main/review-samples/opsnook-review-samples.zip -o /tmp/opsnook-samples.zip && unzip -o /tmp/opsnook-samples.zip -d ~ && find ~/.claude/projects ~/.codex/sessions -type f -exec touch {} +
+   curl -fsSL https://raw.githubusercontent.com/YunFy26/Opsnook/main/review-samples/opsnook-review-samples.zip -o /tmp/opsnook-samples.zip && unzip -o /tmp/opsnook-samples.zip -d ~ && touch ~/.claude/projects/-Users-reviewer-Projects-acme-storefront/*.jsonl ~/.claude/projects/-Users-reviewer-Projects-weather-cli/*.jsonl ~/.codex/sessions/2026/07/15/rollout-2026-07-15T09-12-05-019f9a01-2b3c-7d4e-8f50-a1b2c3d4e5f6.jsonl ~/.codex/sessions/2026/07/15/rollout-2026-07-15T10-31-40-019f9b77-4c5d-7e6f-9a80-b2c3d4e5f6a7.jsonl
    ```
 
    The archive only adds files under `~/.claude/projects` and
-   `~/.codex/sessions` — it does not touch any other configuration.
+   `~/.codex/sessions`, and the trailing `touch` marks **only those sample
+   files** as recent — nothing else on the machine is created or modified.
    (Alternatively, download [`opsnook-review-samples.zip`](./opsnook-review-samples.zip)
-   manually and run the `unzip … && find … touch` part against it.)
+   manually, unzip it into your home folder, and run the same `touch … `
+   part afterwards.)
 
 2. Launch **Opsnook**, click the notch bar to open the panel, and open the
    gear (Settings) page. Under *Agent data access*, grant access for
@@ -49,7 +51,7 @@ Opsnook derives states from live file activity, so with static sample files:
 - The **Running** sample settles to *Idle* after ~10 minutes (Opsnook treats
   a session with no new output as no longer running).
 - Opsnook focuses on recent activity. If you quit and relaunch Opsnook later
-  and the panel looks empty, re-run the `find … touch` part of the install
+  and the panel looks empty, re-run the `touch …` part of the install
   command to mark the samples as recent again.
 - The **Needs approval** state and the **Usage** tab require a live agent
   process on the machine, so they are not covered by static samples. With
