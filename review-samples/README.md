@@ -42,12 +42,6 @@ Back on the **Sessions** tab, seven sample sessions across two projects
 | “Explain the forecast caching layer” | Completed Q&A session |
 | Two **Codex** sessions | Multi-agent support (webhook refactor, `--json` flag) |
 
-Also try:
-
-- **Right-click a Claude session → View session timeline** for the
-  step-by-step tool timeline.
-- The **Activity** tab for message previews across sessions.
-
 ## Notes on session states
 
 Opsnook derives states from live file activity, so with static sample files:
