@@ -40,20 +40,6 @@ https://github.com/user-attachments/assets/24016373-115b-4575-9272-d4c0bdffc132
 - **Native macOS** — notch UI that collapses to a slim pill and expands on hover or <kbd>⌥⌘H</kbd>, multi-display support, focus mode, English / 中文.
 - **100% local** — Opsnook reads agent sessions from your disk. Zero prompts, commands, paths, or logs ever leave your Mac. No account, no cloud.
 
-## Supported agents
-
-| Agent | Vendor | Integration |
-|---|---|---|
-| Claude Code | Anthropic | Full: status, timeline, usage, **in-panel approvals** |
-| Codex | OpenAI | Status, timeline, usage |
-| Antigravity | Google | Status monitoring, timeline |
-| TRAE SOLO | ByteDance | Status monitoring, timeline |
-| Qoder | Alibaba | Status monitoring, timeline |
-| WorkBuddy (CodeBuddy) | Tencent | Status monitoring, timeline |
-| ZCode | Z.ai | Status monitoring, timeline |
-
-Desktop and CLI variants of the same agent are detected and distinguished automatically.
-
 ## Requirements
 
 - macOS 14 or later (best on a Mac with a notch; a virtual notch is drawn on external displays)
@@ -67,4 +53,4 @@ Everything stays on your Mac. Opsnook parses local session files inside the App 
 
 ## Contact
 
-Questions or feedback: [opsnook@outlook.com](mailto:opsnook@outlook.com) · [opsnook.com](https://opsnook.com)
+Questions or feedback: [support@opsnook.com](mailto:support@opsnook.com) · [opsnook.com](https://opsnook.com)
